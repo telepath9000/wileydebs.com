@@ -21,10 +21,10 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: require.resolve('bable-loader')
+        loader: require.resolve('babel-loader')
       },
       {
-        test: /\.css$/,
+        test: /\.(css|scss)$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {

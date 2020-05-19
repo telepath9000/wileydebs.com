@@ -1,14 +1,14 @@
-$default-background: #D3D3D3;
+$background-color: #D3D3D3;
 
 body {
-  height: 100%
-  background-color: $default-background;
+  height: 100%;
+  background-color: $background-color;
 }
 
 .container {
   align-items: center;
   display: flex;
-  justify-content: centier;
+  justify-content: center;
   padding-top: 10px;
   width: 100%;
 }
