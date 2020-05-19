@@ -6,6 +6,7 @@ const port = 8080;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
+  res.send("hello");
   res.end('app up ad running');
 });
 
