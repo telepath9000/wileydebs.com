@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server/server.js",
     "client": "webpack-dev-server --hot --open",
     "server": "node ./server/index.js",
     "build": "webpack --config webpack.config.js --mode production"
@@ -35,6 +36,7 @@
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.1.0",
+    "concurrently": "^5.2.0",
     "css-loader": "^3.5.3",
     "eslint": "^7.0.0",
     "eslint-plugin-react": "^7.20.0",

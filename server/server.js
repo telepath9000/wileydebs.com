@@ -5,8 +5,10 @@ const path = require('path');
 const hostname = '127.0.0.1';
 const port = 8080;
 
-server.get('/', (req, res) => {
-  res.sendFile(path.join(path.resolve(__dirname, '..') + '/index.html'));
+server.use(express.static(path.join(path.resolve(__dirname, '..'), 'dist')));
+
+server.get('/*', (req, res) => {
+  res.sendFile(path.join(path.resolve(__dirname, '..'), 'index.html'));
 });
 
 server.listen(port, hostname, () =>{
