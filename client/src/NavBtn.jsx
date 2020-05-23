@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './App.scss'
+import './css/NavBtn.scss'
 
 const NavBtn = props => <div className="navigationText" onClick={props.clickHandler} >{props.name}</div>;
 

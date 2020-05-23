@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { router } from './router';
-import './App.scss';
+import NavBar from './NavBar';
+import './css/App.scss';
 
 const App = () => {
   const [page, setPage] = useState("Home");
@@ -9,7 +10,8 @@ const App = () => {
 
   return (
     <div className="container">
-      <Page handleClick={handleIndexClick} />
+      <NavBar handleClick={handleIndexClick}/>
+      <Page />
     </div>
   );
 };

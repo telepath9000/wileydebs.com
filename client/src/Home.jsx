@@ -1,16 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import NavBtn from './NavBtn';
-import './App.scss';
+import './css/App.scss';
 
-const Home = ({ handleClick }) => {
-  return (
-    <div>
-      <NavBtn name="Home" clickHandler={handleClick} />
-      <NavBtn name="About" clickHandler={handleClick} />
-    </div>
-  );
-};
+const Home = ({ handleClick }) => <div>HI WELCOME</div>
 
 Home.propTypes = {
   handleClick: PropTypes.function
