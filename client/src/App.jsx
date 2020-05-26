@@ -14,11 +14,12 @@ const App = () => {
     window.onload = WebGL_render;
   }, []);
   return (
-    <WebGLBackground className="container">
-      <NavBar handleClick={handleIndexClick}/>
+    <div>
+      <WebGLBackground className="container" />
+      <NavBar handleClick={handleIndexClick} />
       <div className="topBuffer" />
       <Page />
-    </WebGLBackground>
+    </div>
   );
 };
 
