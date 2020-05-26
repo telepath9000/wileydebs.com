@@ -1,21 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './css/About.scss';
 
 const callApi = async () => {
-  const response = await fetch('/about');
-  const body = await response.text();
+  let ret = { text: "nothing here" };
 
-  if (response.status != 200)
-    throw Error(body);
-  return body;
+  try {
+    const response = await fetch('/about');
+
+    ret = response.status == 200 ? (await response.json()) : ret;
+  }
+  catch (e) {
+    console.log(e.message);
+  }
+  return ret;
 };
 
 const About = () => {
-  const body = callApi();
+  const [state, setState] = useState({ body: "" });
+
+  useEffect(() => {
+    const useCallApi = async () => {
+      const response = await callApi();
+
+      setState({ body: response.text });
+    }
+
+    useCallApi();
+  }, []);
 
   return (
     <div className="aboutText" >
-      {body}
+      {state.body}
     </div>
   );
 }

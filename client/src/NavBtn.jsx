@@ -6,7 +6,7 @@ const NavBtn = props => <div className="navigationText" onClick={props.clickHand
 
 NavBtn.propTypes = {
   name: PropTypes.string,
-  clickHandler: PropTypes.function
+  clickHandler: PropTypes.func
 };
 
 export default NavBtn;

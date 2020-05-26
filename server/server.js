@@ -10,12 +10,12 @@ server.use(express.static(path.join(path.resolve(__dirname, '..'), 'dist')))
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 
-server.get('/*', (req, res) => {
+server.get('/', (req, res) => {
   res.sendFile(path.join(path.resolve(__dirname, '..'), 'index.html'));
 });
 
 server.get('/about', (req, res) => {
-  res.send(/*get about from mongo*/"test");
+  res.send(/*get about from mongo*/{text: "Text"});
 });
 
 server.listen(port, hostname, () =>{

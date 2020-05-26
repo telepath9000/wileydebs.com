@@ -10,7 +10,7 @@ const NavBar = ({ handleClick }) =>
     </div>
 
 NavBar.propTypes = {
-  handleClick: PropTypes.function
+  handleClick: PropTypes.func
 };
 
 export default NavBar;
