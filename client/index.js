@@ -7,7 +7,7 @@ import {
   Link,
   useRouteMatch,
   useParams
-} from 'react-route-dom';
+} from 'react-router-dom';
 
 import App from './src/main/App';
 
