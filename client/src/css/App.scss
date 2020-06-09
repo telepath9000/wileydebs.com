@@ -9,4 +9,11 @@ canvas {
 
 .topBuffer {
   padding-top: 10vh;
+  float: left;
+}
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: green;
 }

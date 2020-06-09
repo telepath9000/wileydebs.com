@@ -3,6 +3,7 @@ import NavBar from './NavBar';
 import WebGLBackground from './WebGLBackground';
 import { WebGL_render } from './WebGL/render.js';
 import { router } from './router';
+import onResize from './onResize';
 import './css/App.scss';
 
 const App = () => {
@@ -12,13 +13,15 @@ const App = () => {
 
   useEffect(() => {
     window.onload = WebGL_render;
+    window.onresize = onResize;
   }, []);
   return (
     <div>
-      <WebGLBackground className="container" />
+      <WebGLBackground />
       <NavBar handleClick={handleIndexClick} />
-      <div className="topBuffer" />
-      <Page />
+      <div className="topBuffer" >
+        <Page className="pageContents" />
+      </div>
     </div>
   );
 };
