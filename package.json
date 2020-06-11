@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./server/server.js",
-    "client": "webpack-dev-server --port 3000 --hot --open --host 0.0.0.0",
+    "client": "webpack-dev-server --port 3000 --hot --open --history-api-fallback --host 0.0.0.0",
     "server": "node ./server/index.js",
     "build": "webpack --config webpack.config.js --mode production"
   },
@@ -45,6 +45,7 @@
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
     "mongodb": "^3.5.7",
+    "mongoose": "^5.9.18",
     "node-sass": "^4.14.1",
     "react-router-dom": "^5.2.0",
     "sass-loader": "^8.0.2",

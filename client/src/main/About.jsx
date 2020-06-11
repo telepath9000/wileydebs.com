@@ -22,12 +22,10 @@ const About = () => {
     const useCallApi = async () => {
       const response = await callApi();
 
-      setState({ body: response.text });
+      setState({ body: response.about });
     }
-
     useCallApi();
   }, []);
-
   return (
     <div className="aboutText" >
       {state.body}
