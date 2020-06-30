@@ -11,9 +11,7 @@ export function WebGL_render() {
     alert("Unable to initialize WebGL. not suported");
     return ;
   }
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);
-  gl.clear(gl.COLOR_BUFFER_BIT);
   initShaders(gl, vertShaderText, fragShaderText);
   if (gl.program)
-    WebGL_draw(gl, canvas);
+    window.setInterval(() => WebGL_draw(gl, canvas), 20);
 }
