@@ -8,7 +8,7 @@ export function WebGL_render() {
   const gl = canvas.getContext("webgl");
 
   if (gl == null) {
-    alert("Unable to initialize WebGL. not suported");
+    alert("Unable to initialize WebGL. not supported");
     return ;
   }
   initShaders(gl, vertShaderText, fragShaderText);
