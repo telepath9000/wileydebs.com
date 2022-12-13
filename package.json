@@ -23,7 +23,7 @@
   "homepage": "https://github.com/Colortear/wileydebs.com#readme",
   "dependencies": {
     "chokidar": "^3.4.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "http": "0.0.1-security",
     "https": "^1.0.0",
     "path": "^0.12.7",
